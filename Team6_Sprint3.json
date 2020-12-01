@@ -1,0 +1,413 @@
+{
+  "info": {
+    "_postman_id": "b6d7b9ac-ddce-41c9-b85b-dd46b1576d2d",
+    "name": "Sprint 3 Corrected",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Promotion",
+      "item": [
+        {
+          "name": "/Promotion",
+          "_postman_id": "213ba6e7-150f-4569-9648-338bcb1dc2a6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{url}}/Promotion",
+            "description": "Returns a list of promotions"
+          },
+          "response": [
+            {
+              "id": "85a04f90-b07b-476a-9f9c-6b4696325762",
+              "name": "Invalid Get",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"message\": \"Invalid get request\"\n}"
+            },
+            {
+              "id": "bdfc90e0-a23b-4cd7-a826-242f10fe1847",
+              "name": "Successfully returned a list of promotions",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "[\n    {\n        \"ID\": \"1\",\n        \"promotion_name\": \"Promotion 1\",\n        \"promotion_value\": 12354\n    },\n    {\n        \"ID\": \"2\",\n        \"promotion_name\": \"Promotion 2\",\n        \"promotion_value\": 25086020\n    },\n    {\n        \"ID\": \"3\",\n        \"promotion_name\": \"Promotion 3\",\n        \"promotion_value\": 123124123\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "/Promotion",
+          "_postman_id": "d50779ac-3449-49e7-a72e-91bb81e7b996",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{url}}/Promotion",
+            "description": "adds and item to the cart"
+          },
+          "response": [
+            {
+              "id": "abc0e0a7-3229-408c-96f4-e83557c552c2",
+              "name": "Invalid Post",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"message\": \"Invalid post request\"\n}"
+            },
+            {
+              "id": "d407fe1f-f27b-478a-b6c7-be67c8c73b16",
+              "name": "Succesfuly added an item to the cart",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "OK",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\n    \"ID\": \"4\",\r\n    \"promotion_name\": \"Blue Hoodie\",\r\n    \"promotion_value\": 10000001\r\n}"
+            }
+          ]
+        },
+        {
+          "name": "/Promotion",
+          "_postman_id": "05d13ce3-6b56-4dfc-95f4-93c528a06034",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{url}}/Promotion",
+            "description": "deletes value in a list of promotions"
+          },
+          "response": [
+            {
+              "id": "1e243657-052d-47c4-b198-bb0b34c9549a",
+              "name": "Invalid Delete",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"Message\": \"invalid delete request\"\n}"
+            },
+            {
+              "id": "885e9eea-69c3-4333-bd79-fb77d23a75fa",
+              "name": "Successfully deleted value in promotions",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "[\n    {\n        \"ID\": \"2\",\n        \"promotion_name\": \"Promotion 2\",\n        \"promotion_value\": 25086020\n    },\n    {\n        \"ID\": \"3\",\n        \"promotion_name\": \"Promotion 3\",\n        \"promotion_value\": 123124123\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "/Promotion",
+          "_postman_id": "6abaf4fb-be00-4e91-9f70-19d8db6a5af5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "{{url}}/Promotion",
+            "description": "changes promotion value in a list of promotions"
+          },
+          "response": [
+            {
+              "id": "250428b1-2990-4aee-8698-a422f0197def",
+              "name": "Successfully changed value in promotions",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "[\n    {\n        \"ID\": \"1\",\n        \"promotion_name\": \"Promotion 1\",\n        \"promotion_value\": 12354\n    },\n    {\n        \"ID\": \"2\",\n        \"promotion_name\": \"Promotion 2\",\n        \"promotion_value\": 25086020\n    },\n    {\n        \"ID\": \"3\",\n        \"promotion_name\": \"Promotsdfh jls;dfgkll;dfghion 3\",\n        \"promotion_value\": 123124123\n    }\n]"
+            },
+            {
+              "id": "8d6895bf-11ef-4967-a0e8-5b58c8498c5f",
+              "name": "Invalid Put Request",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": "{{url}}/Promotion"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"message\": \"Invalid Put request detected\"\n}"
+            }
+          ]
+        }
+      ],
+      "_postman_id": "4f2a984c-4276-447f-a768-b7ffc4f8b243"
+    },
+    {
+      "name": "Post Promo",
+      "_postman_id": "2346a0e6-88d6-457d-b45e-7cf243dc2614",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/user?start_date=\"11/12/11\"&end_date=\"11/24/11\"&promo_type=\"BOGO\"&item_category=\"sweatshirt\"&item_id=\"1\"",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "user"
+          ],
+          "query": [
+            {
+              "key": "start_date",
+              "value": "\"11/12/11\"",
+              "description": "(Required) Start date of which the promotion is valid"
+            },
+            {
+              "key": "end_date",
+              "value": "\"11/24/11\"",
+              "description": "(Required) End date of which the promotion is valid"
+            },
+            {
+              "key": "promo_type",
+              "value": "\"BOGO\"",
+              "description": "(Required) What kind of promotion is being entered"
+            },
+            {
+              "key": "item_category",
+              "value": "\"sweatshirt\"",
+              "description": "(Required) Type of category being entered (jacket, pants, hats, etc.)"
+            },
+            {
+              "key": "item_id",
+              "value": "\"1\"",
+              "description": "(Required) Unique identifier for a created Promotion."
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "46b3bdff-b586-44a7-b801-71e68422c062",
+          "name": "Valid Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/user?start_date=\"11/11/11\"&end_date=\"11/18/11\"&promo_type=\"BOGO\"&item_category=\"sweatshirt\"&item_id=\"1\"",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "start_date",
+                  "value": "\"11/11/11\""
+                },
+                {
+                  "key": "end_date",
+                  "value": "\"11/18/11\""
+                },
+                {
+                  "key": "promo_type",
+                  "value": "\"BOGO\""
+                },
+                {
+                  "key": "item_category",
+                  "value": "\"sweatshirt\""
+                },
+                {
+                  "key": "item_id",
+                  "value": "\"1\""
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "description": "A link to the next page of responses",
+              "key": "x-next",
+              "value": "cillum voluptate Excepteur aliquip"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n \"id\": 200,\n \"name\": \"Successfully added promotion\",\n \"tag\": \"BOGO for 11/12/2020 to 11/24/2020\"\n}"
+        },
+        {
+          "id": "8117ba2f-090f-46f8-b316-4712db203a8f",
+          "name": "Invalid Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/user/INVALID?start_date=<string>&end_date=<string>&promo_type=<string>&item_category=<string>&item_id=<string>",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "user",
+                "INVALID"
+              ],
+              "query": [
+                {
+                  "key": "start_date",
+                  "value": "<string>"
+                },
+                {
+                  "key": "end_date",
+                  "value": "<string>"
+                },
+                {
+                  "key": "promo_type",
+                  "value": "<string>"
+                },
+                {
+                  "key": "item_category",
+                  "value": "<string>"
+                },
+                {
+                  "key": "item_id",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "description": "A link to the next page of responses",
+              "key": "x-next",
+              "value": "cillum voluptate Excepteur aliquip"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n  \"Message\" : \"ERROR, failed to add new promotion\"\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "id": "baseUrl",
+      "key": "baseUrl",
+      "value": "https://CUSports.com/promotions",
+      "type": "string"
+    }
+  ]
+}
